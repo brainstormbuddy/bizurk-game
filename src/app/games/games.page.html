@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+  <app-search-field></app-search-field>
+  <ion-segment class="segment-button-group" [(ngModel)]="selectedCategory" (ionChange)="onCategoryChange($event)">
+    <ion-segment-button value="puzzle">Puzzle</ion-segment-button>
+    <ion-segment-button value="racing">Racing</ion-segment-button>
+    <ion-segment-button value="action">Action</ion-segment-button>
+    <ion-segment-button value="adventure">Adventure</ion-segment-button>
+  </ion-segment>
+
+  <ion-grid>
+    <ion-col *ngFor="let game of filteredGames; let i = index">
+      <app-game-card [game]="game!"></app-game-card>
+    </ion-col>
+  </ion-grid>
+</ion-content>

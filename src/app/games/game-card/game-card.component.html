@@ -1,0 +1,16 @@
+<ion-card>
+  <ion-img class="card-image" [src]="game().image" [alt]="game().image"></ion-img>
+  <ion-icon class="bookmark" name="bookmark"></ion-icon>
+  <div class="card-wrapper" [ngStyle]="{'background-color': game().color, 
+    'box-shadow': '0px 1px 4px rgba(' + hexToRgb(game().color) + ', 0.5)'}
+    ">
+    <ion-img class="logo-image" [src]="game().logo" [alt]="game().logo"></ion-img>
+    <ion-card-title>{{ game().title }}</ion-card-title>
+    <ion-card-content>
+      <app-rating [rating]="game().rating" />
+      <ion-text>
+        <span><b>€ {{ game().price }}</b></span>
+      </ion-text>
+    </ion-card-content>
+  </div>
+</ion-card>

@@ -1,0 +1,52 @@
+ion-card {
+  padding: 16px 12px 12px 12px;
+  margin: 0;
+  color: #fff;
+  transition: transform 0.2s;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 12px;
+}
+
+ion-card:hover {
+  transform: scale(1.05);
+}
+
+ion-card-title {
+  font-size: 1rem;
+}
+
+ion-card-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6.5rem;
+  height: 9.2rem;
+  object-fit: cover;
+}
+
+.card-wrapper {
+  padding: 1rem 0 0.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.logo-image {
+  width: 4rem;
+  height: 2rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.bookmark {
+  position: absolute;
+  right: 25px;
+  top: 16px;
+}

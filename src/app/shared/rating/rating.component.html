@@ -1,0 +1,12 @@
+<div class="rating">
+  <ng-container *ngFor="let star of [].constructor(filledStars); let i = index">
+    <ion-icon name="star"></ion-icon>
+  </ng-container>
+  <ng-container *ngIf="halfStar">
+    <ion-icon name="star-half"></ion-icon>
+  </ng-container>
+  <ng-container *ngFor="let star of [].constructor(emptyStars); let i = index">
+    <ion-icon name="star-outline"></ion-icon>
+  </ng-container>
+  <span>{{ rating() | number: '1.1-1' }}</span>
+</div>

@@ -1,0 +1,18 @@
+<div class="search-field-container">
+  <div class="search-field" [ngClass]="{ closed: _isClose && !searchValue }">
+    <div class="empty"></div>
+    <div class="search-input-container">
+      @if (searchValue) {
+      <button class="clear-button" (click)="handleClear($event)">
+        <ion-icon class="close-icon" name="close-outline"></ion-icon>
+      </button>
+      }
+      <input #searchInput type="search" class="search-input" [ngClass]="{ hasValue: !_isClose && !searchValue }" [placeholder]="'Search'" [(ngModel)]="searchValue"
+        (blur)="handleBlur()" required />
+    </div>
+
+    <button class="search-button button-undecorated" (click)="handleSearchIconClick()" aria-label="Search">
+      <ion-icon class="search-icon" name="search-outline"></ion-icon>
+    </button>
+  </div>
+</div>

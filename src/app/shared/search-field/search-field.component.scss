@@ -1,0 +1,116 @@
+.search-field-container {
+  display: flex;
+  width: 100%;
+  transition: all 0.3s;
+
+  .search-field {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    input {
+      transition: all 0.3s;
+    }
+
+    .empty {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--grey-background);
+      border-radius: 2rem;
+    }
+
+    &.closed {
+      width: 4rem;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .search-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 4rem;
+      height: 100%;
+      background-color: transparent;
+      border-radius: 50%;
+      z-index: 1;
+
+      .search-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .search-input-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      .search-input {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: none;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        text-overflow: ellipsis;
+        border-radius: 0 6.25rem 6.25rem 0;
+        background-color: transparent;
+
+        &.hasValue {
+          padding-left: 4rem !important;
+        }
+
+        &:focus {
+          outline: none;
+          background: none;
+        }
+
+        &::placeholder {
+          color: var(--text-unselected);
+        }
+      }
+
+      .clear-button {
+        width: 4rem;
+        height: 4rem;
+        background: transparent;
+
+        .close-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      input[type="search"] {
+        height: 100%;
+        border: none;
+      }
+
+      input[type="search"]::-webkit-search-cancel-button {
+        display: none;
+      }
+
+      .search-input:not(:valid) ~ .clear-button {
+        display: none;
+      }
+
+      .search-input:valid ~ .clear-button {
+        &.closed {
+          display: none;
+        }
+      }
+    }
+  }
+}
