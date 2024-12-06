@@ -16,8 +16,16 @@ ion-segment-button {
   --color: #bababa;
   --color-checked: #ffcc00;
   --background: #20242a;
-  --indicator-color: #20242a;
+  --background-checked: transparent;
+  --background-focused: transparent;
+  --indicator-color : transparent !important; /* this solution */
+  --indicator-box-shadow: transparent !important;
   --border-radius: 20px;
+  --ripple-color: transparent;
+}
+
+ion-segment-button:hover, ion-segment-button:focus-within {
+  background-color: transparent;
 }
 
 ion-segment-button::before {

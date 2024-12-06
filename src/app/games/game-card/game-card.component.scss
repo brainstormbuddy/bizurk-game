@@ -14,12 +14,14 @@ ion-card:hover {
 
 ion-card-title {
   font-size: 1rem;
+  color: white;
 }
 
 ion-card-content {
   padding: 0;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 .card-image {
